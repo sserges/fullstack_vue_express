@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const url = 'http://localhost:5000/api/posts/';
+const url = "api/posts/";
 
 class PostService {
   // Get Posts
@@ -14,7 +14,7 @@ class PostService {
             data.map((post) => ({
               ...post,
               createdAt: new Date(post.createdAt),
-            }))
+            })),
           );
         })
         .catch((error) => reject(error));
